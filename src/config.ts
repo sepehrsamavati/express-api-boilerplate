@@ -1,10 +1,21 @@
 import "reflect-metadata";
 import * as dotenv from "dotenv";
+import fs from "node:fs/promises";
 import process from "node:process";
 import ConfigError from "./models/ConfigError.js";
 dotenv.config();
 
+let version = process.env.npm_package_version;
+if(!version) {
+    try {
+        version = JSON.parse((await fs.readFile("./package.json")).toString()).version;
+    } catch {
+        version = "unknown version";
+    }
+}
+
 const config = Object.freeze({
+    version,
     debug: false,
     alwaysConsoleLog: false,
     isDevelopment: process.env.NODE_ENV !== "production",
