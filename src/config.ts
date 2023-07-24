@@ -1,3 +1,4 @@
+import "reflect-metadata";
 import * as dotenv from "dotenv";
 import process from "node:process";
 import ConfigError from "./models/ConfigError.js";

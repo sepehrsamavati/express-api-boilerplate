@@ -1,4 +1,3 @@
-import "reflect-metadata";
 import { json, RequestHandler } from "express";
 import { validateSync } from "class-validator";
 import { plainToClass } from "class-transformer";
