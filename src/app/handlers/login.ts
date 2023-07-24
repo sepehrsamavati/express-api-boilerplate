@@ -1,9 +1,9 @@
-import config from "../../../config.js";
+import config from "../../config.js";
 import { RequestHandler } from "express";
-import LoginDTO from "../../dto/LoginDTO.js";
-import { sign } from "../../../helpers/jwtHelper.js";
-import { hash, hashCompare } from "../../../helpers/crypto.js";
-import OperationResult from "../../../models/OperationResult.js";
+import LoginDTO from "../dto/LoginDTO.js";
+import { sign } from "../../helpers/jwtHelper.js";
+import { hash, hashCompare } from "../../helpers/crypto.js";
+import OperationResult from "../../models/OperationResult.js";
 
 export const loginHandler: RequestHandler = async (req, res, next) => {
     const loginDTO: LoginDTO = req.body;
