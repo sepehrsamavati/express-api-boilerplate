@@ -1,4 +1,4 @@
-import { ExpressApplication } from "./app/app.js";
+import { ExpressApplication } from "./app/ExpressApplication.js";
 
 const server = new ExpressApplication();
 

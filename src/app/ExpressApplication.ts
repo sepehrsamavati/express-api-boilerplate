@@ -2,7 +2,7 @@ import express from "express";
 import config from "../config.js";
 import { Server } from "node:http";
 import setRouters from "./routers/setRouters.js";
-import { IDisposable } from "../types/disposable";
+import { IDisposable } from "../types/disposable.js";
 import { httpLogger } from "./middlewares/logger.js";
 import { httpServerLogger } from "../helpers/logger.js";
 import { errorRequestHandler, notFoundHandler } from "./errorHandlers.js";
