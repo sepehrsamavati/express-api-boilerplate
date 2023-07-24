@@ -7,7 +7,8 @@ const config = Object.freeze({
     alwaysConsoleLog: false,
     isDevelopment: process.env.NODE_ENV !== "production",
     api: {
-        port: parseInt(process.env.EAB_SERVER_PORT ?? "3033")
+        port: parseInt(process.env?.EAB_SERVER_PORT ?? "3033"),
+        trustProxy: process.env?.EAB_TRUST_PROXY?.trim().toLowerCase() === "true"
     },
     log: {
         disable: process.argv.includes("--silent-logger"),
