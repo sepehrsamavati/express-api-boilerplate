@@ -18,6 +18,8 @@ export const httpServerLogger = winston.createLogger({
     ],
 });
 
+export const logger = httpServerLogger;
+
 const debugLog = config.isDevelopment || config.debug;
 if (!config.log.disable && (debugLog || config.alwaysConsoleLog)) {
     if (debugLog)
