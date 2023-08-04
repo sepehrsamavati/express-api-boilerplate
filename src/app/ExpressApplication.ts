@@ -31,13 +31,7 @@ export class ExpressApplication implements IDisposable {
 
         setRouters(this.#app);
 
-        this.#app.set('view engine', 'ejs');
-        this.#app.set('views', './client/views');
-        this.#app.set("layout", './layout');
-        this.#app.set("layout extractStyles", true);
-        this.#app.set("layout extractScripts", true);
-
-        this.#app.use("/static", express.static("./client/public"));
+        this.#app.use("/static", express.static("./public"));
         this.#app.use(notFoundHandler);
         this.#app.use(errorRequestHandler);
 
