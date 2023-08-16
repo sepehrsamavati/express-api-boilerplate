@@ -43,5 +43,5 @@ A **Router** (similar to controller) routes the incoming request to desired hand
 Middlewares:
 1. `logger.ts` binds a callback on response finish event and writes/logs request information.
 2. `jwtResolve.ts` reads token from _cookie_ and attaches the payload into `res.locals.user`; This middleware must be called after cookie parser.
-3. `authGuard.ts` checks if `res.locals.user` object is defined or not; Responses _403_ (forbidden) if user payload is not defined, passes the request to next middleware/handler if user payload is defined. Must be called after `jwtResolve.ts`.
+3. `authGuard.ts` checks if `res.locals.user` object is defined or not; Responses _401_ (unauthorized) if user payload is not defined, passes the request to next middleware/handler if user payload is defined. Must be called after `jwtResolve.ts`.
 4. `dtoValidator.ts` validates user inputs. Requires a DTO constructor, calls express `json()` middleware, validates query parameters on _GET_ method and request body on _POST_ method (as JSON); Responses _400_ (bad request) if DTO validation fails, attaches the DTO into `res.locals.dto` & passes the request to next middleware/handler if DTO is valid.
