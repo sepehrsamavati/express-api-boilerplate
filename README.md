@@ -4,6 +4,7 @@
 - Logger
 - JWT & Auth
 - DTO validation
+- Static file server
 - Environment & configuration
 - Graceful process shutdown
 
