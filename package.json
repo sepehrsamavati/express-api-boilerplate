@@ -8,7 +8,11 @@
     "build": "tsc"
   },
   "keywords": [],
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sepehrsamavati/express-api-boilerplate.git"
+  },
+  "author": "Sepehr Samavati",
   "license": "MIT",
   "dependencies": {
     "class-transformer": "^0.5.1",
